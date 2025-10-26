@@ -10,6 +10,7 @@ This project performs Exploratory Data Analysis (EDA) on a dataset named `PhDPub
 The goal is to explore, clean, and visualize the data to uncover **hidden trends, patterns, and relationships** that influence publication output among PhD scholars.
 
 
+
 🎯 Why this Project?
 Understanding academic publication patterns helps answer key questions like:
 - Do **marital status** or number of kids affect research productivity?
@@ -21,6 +22,7 @@ By answering these, the project demonstrates:
 - Strong command over **data wrangling, transformation, and visualization**.
 - Ability to derive **data-driven insights**.
 - Real-world application of **EDA for decision-making and hypothesis generation**.
+
 
 
 ⚙️ How it was Done
@@ -49,35 +51,30 @@ Columns:
   - `publications_binned` → Low / Medium / High  
   - `prestige_binned` → Very Low / Low / High / Very High  
   - `kids_binned` → No Kids / Few / Some / Many  
-
 These transformations simplified analysis and improved interpretability.
+
 4️⃣ Outlier Detection
 Applied two statistical techniques:
 - IQR Method: Removed extreme values beyond 1.5×IQR in `publications` and `kids`.  
 - Z-Score Method: Filtered rows where |Z| > 3 for standardized publication counts.  
-
 This ensured that visualizations reflected meaningful patterns, not skewed data.
 
 5️⃣ Data Analysis
 Conducted three levels of analysis:
-
 🔹 Univariate Analysis
 - Histograms and KDE plots to study single variable distributions (e.g., `publications`, `prestige`).
-
 🔹 Bivariate Analysis
 - Scatter plots (e.g., `publications` vs `kids`) to observe relationships.
 - Grouped averages by gender and marital status.
-
 🔹 Multivariate Analysis
 - Pair plots and heatmaps to visualize correlations between numerical columns.
 
- 6️⃣ Visualization Techniques
+6️⃣ Visualization Techniques
 Used:
-- **Seaborn** for heatmaps, pairplots, and boxplots.  
-- **Matplotlib** for histograms and bar charts.  
+- Seaborn for heatmaps, pairplots, and boxplots.  
+- Matplotlib for histograms and bar charts.  
 These helped in visually summarizing relationships and trends across the dataset.
 
 🧩 Tools & Libraries
-
 ```python
 pandas, numpy, matplotlib, seaborn, scipy
